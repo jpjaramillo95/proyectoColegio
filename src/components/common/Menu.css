@@ -1,0 +1,14 @@
+.menu{
+    font-family: 'Quicksand';
+    background-color: #022136;
+    margin-bottom: 23.2%;
+}
+
+.itemMenu{
+    color: white;
+    font-weight: bold;
+}
+
+.itemMenu:hover{
+    font-weight: normal;
+}

@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
 
 @font-face {
     font-family: Quicksand;
@@ -11,3 +13,10 @@
   @theme {
     --font-Quicksand: 'Quicksand';
   }
+
+  /* 
+  #022136
+  #022942
+  #0767A9
+  #BDBDBD
+  */
