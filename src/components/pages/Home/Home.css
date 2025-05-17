@@ -20,12 +20,21 @@
 
 .btnIzq,
 .btnDer{
+    border: none;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  background: none;
-  border: none;
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  z-index: 100;
 }
 
 .btnIzq{
@@ -34,4 +43,10 @@
 
 .btnDer{
     right: 18px;
+}
+
+.btnIzq img,
+.btnDer img {
+  width: 30px;
+  height: auto;
 }
