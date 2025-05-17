@@ -15,19 +15,19 @@ export default function Menu() {
 
             <ul className={`menuOpciones ${menuAbierto ? "abierto" : ""}`}>
                 <NavLink to="/" className={({ isActive }) => isActive ? "linkActivo" : ""}>
-                    <li>Matricula</li>
+                    <li>Inicio</li>
                 </NavLink>
                 <NavLink to="/aa" className={({ isActive }) => isActive ? "linkActivo" : ""}>
-                    <li>Notas</li>
+                    <li>Registro y Control</li>
                 </NavLink>
                 <NavLink to="/a" className={({ isActive }) => isActive ? "linkActivo" : ""}>
-                    <li>Asistencias</li>
+                    <li>Estudiantes</li>
                 </NavLink>
                 <NavLink to="87" className={({ isActive }) => isActive ? "linkActivo" : ""}>
-                    <li>Modulos</li>
+                    <li>Asistencia</li>
                 </NavLink>
                 <NavLink to="87" className={({ isActive }) => isActive ? "linkActivo" : ""}>
-                    <li>Éxamenes</li>
+                    <li>Notas</li>
                 </NavLink>
             </ul>
             {/* <ul className="iconsMenu">

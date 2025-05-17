@@ -1,9 +1,10 @@
+import './Home.css'
 import { useEffect, useState } from "react"
 import banner1 from "../../../../src/assets/img/banner1.jpg"
 import banner2 from "../../../../src/assets/img/banner2.jpg"
 import btnDerecho from "../../../../src/assets/img/btnDer.svg"
 import btnIzquierdo from "../../../../src/assets/img/btnIzq.svg"
-import './Home.css'
+import CardNoticias from "../../common/CardNoticias"
 
 export default function Home() {
 
@@ -37,6 +38,25 @@ export default function Home() {
             <button className="btnDer" onClick={nextSlide}>
                 <img src={btnDerecho} alt="bton derecho"/>
             </button>
+        </div>
+        <div className="noticias">
+            <h1 className='tituloNoticias'>Noticias Recientes</h1>
+        </div>
+        <div className='contenedorNoticias'>
+          <CardNoticias></CardNoticias>
+          <CardNoticias></CardNoticias>
+          <CardNoticias></CardNoticias>
+        </div>
+        <div className='contenedorCifras'>
+          <h1>Nuestro Colegio En Cifras</h1>
+          <h3>Nuestras estadisticas</h3>
+          <div className='contenedorCifras'>
+            <div className='cifras'>
+              <img src="" alt="" />
+              <p className="cifra">204</p>
+              <p className="dato">ESTUDIANTES</p>
+            </div>
+          </div>
         </div>
     </>
   )
