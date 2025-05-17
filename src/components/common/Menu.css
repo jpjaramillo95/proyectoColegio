@@ -1,14 +1,103 @@
-.menu{
-    font-family: 'Quicksand';
-    background-color: #022136;
-    margin-bottom: 23.2%;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-.itemMenu{
-    color: white;
-    font-weight: bold;
+#menu {
+  font-family: Quicksand;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1000;
+  background: #fff7ae;
 }
 
-.itemMenu:hover{
-    font-weight: normal;
+.logoMenu {
+  width: 180px;
+  margin: auto;
+  font-weight: bold;
+  font-size: 16pt;
+}
+
+.menuOpciones {
+  margin: auto;
+}
+
+ul li {
+  display: inline-block;
+  padding: 20px;
+  margin: 0px;
+}
+
+.iconoMenu {
+  height: 35px;
+}
+
+a {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  transition: 0.5s;
+}
+
+a:hover {
+  padding: 5px 0px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.linkActivo {
+  background: #7bc8ce;
+  color: rgb(0, 0, 0);
+  border-radius: 50px;
+  padding: 5px 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.menuHamburguesa {
+  display: none;
+  font-size: 16pt;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menuOpciones {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background: #fff7ae;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .menuOpciones.abierto {
+    display: flex;
+    max-height: 500px;
+  }
+
+  .menuHamburguesa {
+    display: block;
+  }
+  
+.linkActivo {
+  background: #7bc8ce;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 600;
+}
+
 }

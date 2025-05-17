@@ -1,80 +1,44 @@
-import { Link } from "react-router-dom"
-import {
-  Avatar,
-  Dropdown,
-  DropdownDivider,
-  DropdownHeader,
-  DropdownItem,
-  Navbar,
-  NavbarBrand,
-  NavbarCollapse,
-  NavbarLink,
-  NavbarToggle,
-} from "flowbite-react";
+import { NavLink } from "react-router-dom"
 import './Menu.css'
+import { useState } from "react"
 
 export default function Menu() {
+    const [menuAbierto, setMenuAbierto] = useState(false);
   return (
     <>
-    <div className="menu">
-    <Navbar fluid>
-      <NavbarBrand to="">
-        {/* <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" /> */}
-        <span className="self-center whitespace-nowrap text-xl font-bold text-white">Colegio App</span>
-      </NavbarBrand>
-      <div className="flex md:order-2">
-        <Dropdown
-          arrowIcon={false}
-          inline
-          label={
-            <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
-          }
-        >
-          <DropdownHeader>
-            <span className="block text-sm font-bold">Nombre</span>
-            <DropdownDivider />
-            <span className="block truncate text-sm font-medium">Correo - email</span>
-          </DropdownHeader>
-          <DropdownItem>Tareas</DropdownItem>
-          <DropdownItem>Notas</DropdownItem>
-          <DropdownItem>Configuración</DropdownItem>
-          <DropdownDivider />
-          <DropdownItem>Cerrar Sesión</DropdownItem>
-        </Dropdown>
-        <NavbarToggle />
-      </div>
-      <div>
-        <NavbarCollapse>
-            <NavbarLink to="/home">
-            <div className="itemMenu">
-                Inicio
-            </div>
-            </NavbarLink>
-            <NavbarLink to="/home">
-            <div className="itemMenu">
-                Tareas
-            </div>
-            </NavbarLink>
-            <NavbarLink to="/home">
-            <div className="itemMenu">
-                Examenes
-            </div>
-            </NavbarLink>
-            <NavbarLink to="/home">
-            <div className="itemMenu">
-                Calendario
-            </div>
-            </NavbarLink>
-            <NavbarLink to="/home">
-            <div className="itemMenu">
-                Analisis de Datos
-            </div>
-            </NavbarLink>
-        </NavbarCollapse>
-      </div>
+        <section id="menu">
+            <p className="logoMenu">Colegio App</p>
+            {/* <img src="./img/img-index/logoFundacion-02.svg" alt="logo fundacion" className="logoMenu"/> */}
 
-    </Navbar>
-    </div>
+            <button className="menuHamburguesa"
+            onClick={()=>setMenuAbierto(!menuAbierto)}> ☰ </button>
+
+            <ul className={`menuOpciones ${menuAbierto ? "abierto" : ""}`}>
+                <NavLink to="/" className={({ isActive }) => isActive ? "linkActivo" : ""}>
+                    <li>Matricula</li>
+                </NavLink>
+                <NavLink to="/aa" className={({ isActive }) => isActive ? "linkActivo" : ""}>
+                    <li>Notas</li>
+                </NavLink>
+                <NavLink to="/a" className={({ isActive }) => isActive ? "linkActivo" : ""}>
+                    <li>Asistencias</li>
+                </NavLink>
+                <NavLink to="87" className={({ isActive }) => isActive ? "linkActivo" : ""}>
+                    <li>Modulos</li>
+                </NavLink>
+                <NavLink to="87" className={({ isActive }) => isActive ? "linkActivo" : ""}>
+                    <li>Éxamenes</li>
+                </NavLink>
+            </ul>
+            {/* <ul className="iconsMenu">
+                <NavLink to="#">
+                    <li><img src="./img/img-index/log-menu.svg" alt="log menu" className="iconoMenu"/></li>
+                </NavLink>
+                <NavLink to="#">
+                    <li><img src="./img/img-index/cart-menu.svg" alt="cart menu" className="iconoMenu"/></li>
+                </NavLink>
+            </ul> */}
+        </section>
     </>
   )
 }
