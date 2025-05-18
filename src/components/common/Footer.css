@@ -58,7 +58,10 @@
 
 .redesSociales{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
     padding: auto;
 }
 
@@ -71,4 +74,88 @@
 .iconoRedes img {
     width: 30px;
     height: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .contenedorSuperior {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logoFooter {
+    font-size: 18px; 
+    border-right: none; 
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .contenidoDerecha {
+    padding: 5px;
+  }
+
+  .redesSociales {
+    display: flex;
+    justify-content: space-evenly; 
+    padding: 1px;
+  }
+
+  .iconoRedes img {
+    width: 20px; 
+  }
+
+  .textoCreditos {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contenedorSuperior {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logoFooter {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .redesSociales {
+    justify-content: space-around;
+  }
+
+  .iconoRedes img {
+    width: 28px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contenedorFooter {
+    padding: 40px 5%;
+  }
+
+  .contenedorSuperior {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logoFooter {
+    font-size: 30px;
+  }
+
+  .linkEnlaces {
+    font-size: 16pt;
+  }
+
+    .redesSociales {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .iconoRedes img {
+    width: 32px;
+  }
 }

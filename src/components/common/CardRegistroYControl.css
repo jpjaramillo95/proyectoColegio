@@ -5,16 +5,17 @@
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   max-width: 300px;
   width: 100%;
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.contenedorTarjeta:hover{
-      box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.3);
+.contenedorTarjeta:hover {
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.3);
 }
 
 .elementosIzquierda {
@@ -42,7 +43,57 @@
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.contenedorTarjeta:hover .imgSombra img{
-    transform: rotate(-20deg) scale(1.5);
-    opacity: 0.5;
+.contenedorTarjeta:hover .imgSombra img {
+  transform: rotate(-20deg) scale(1.5);
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 480px) {
+  .contenedorTarjeta {
+    max-width: 90%;
+    margin: 40px auto;
+  }
+
+  .tituloCard {
+    font-size: 16px;
+  }
+
+  .imagenCard img {
+    max-width: 60px;
+  }
+
+  .btnNoticia {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contenedorTarjeta {
+    width: 80%;
+    margin: auto;
+  }
+
+  .tituloCard {
+    font-size: 18px;
+  }
+
+  .imagenCard img {
+    max-width: 70px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contenedorTarjetas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .contenedorTarjeta {
+    width: 350px;
+    height: auto;
+  }
 }

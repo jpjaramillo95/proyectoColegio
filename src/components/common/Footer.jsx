@@ -20,9 +20,7 @@ export default function Footer() {
                         <Link to="/" className="linkEnlaces"><li>Sobre nosotros</li></Link>
                         <Link to="/" className="linkEnlaces"><li>Blog</li></Link>
                         <Link to="/" className="linkEnlaces"><li>Trabaja con nosotros</li></Link>
-                        <Link to="/" className="linkEnlaces"><li>Sobre nosotros</li></Link>
-                        <Link to="/" className="linkEnlaces"><li>Sobre nosotros</li></Link>
-                        <Link to="/" className="linkEnlaces"><li>Sobre nosotros</li></Link>
+                        <Link to="/" className="linkEnlaces"><li>PQR</li></Link>
                     </ul>
                 </div>
                 <div className="redesSociales">

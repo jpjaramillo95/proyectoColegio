@@ -1,3 +1,10 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Quicksand;
+  box-sizing: border-box;
+}
+
 .registroYControl {
   width: 80%;
   margin: auto;
@@ -29,4 +36,59 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .registroYControl {
+    width: 95%; 
+    padding-top: 5%;
+  }
+
+  .tituloRegistroYControl {
+    font-size: 18px; 
+    text-align: center;
+  }
+
+  .registroYControl p {
+    font-size: 12pt; 
+  }
+
+  .contenedorRegistro {
+    flex-direction: column; 
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .registroYControl {
+    width: 90%;
+    padding-top: 4%;
+  }
+
+  .tituloRegistroYControl {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .registroYControl p {
+    font-size: 13pt;
+  }
+
+  .contenedorRegistro {
+    gap: 30px; 
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .registroYControl {
+    width: 80%;
+    padding-top: 2%;
+  }
+
+  .contenedorRegistro {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
 }
