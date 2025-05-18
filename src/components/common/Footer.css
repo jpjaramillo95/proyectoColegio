@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.contenedorFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  background-color: #bdbdbd;
+}
+
+.contenedorSuperior {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.contenidoDerecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.logoFooter {
+  margin: 3%;
+  font-weight: 700;
+  font-size: xx-large;
+  border-right: 4px solid #022136;
+  padding-right: 15px;
+  color: #022136;
+}
+
+.textoCreditos {
+  text-align: center;
+  width: 100%;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #022136;
+}
+
+.linkEnlaces {
+  color: #022136;
+  text-align: center;
+  font-size: 14pt;
+}
+
+.linkEnlaces:hover {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #022136;
+}
+
+.redesSociales{
+    display: flex;
+    justify-content: space-between;
+    padding: auto;
+}
+
+.iconoRedes{
+    z-index: 100;
+    width: 120px;
+    height: auto;
+}
+
+.iconoRedes img {
+    width: 30px;
+    height: auto;
+}

@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "../../pages/Home/Home"
 import Menu from "../../common/menu"
+import Footer from "../../common/Footer"
 
 
 export default function Rutas() {
@@ -11,6 +12,7 @@ export default function Rutas() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/home" element={<Home/>}></Route>
       </Routes>
+      <Footer></Footer>
     </>
   )
 }
