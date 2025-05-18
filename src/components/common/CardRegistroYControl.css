@@ -1,0 +1,48 @@
+.contenedorTarjeta {
+  margin: 70px 20px;
+  padding: 2%;
+  background-color: #0767a9;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.contenedorTarjeta:hover{
+      box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.3);
+}
+
+.elementosIzquierda {
+  position: relative;
+  left: 1px;
+}
+
+.tituloCard {
+  color: white;
+  padding-top: 5px;
+}
+
+.imagenCard img,
+.imgSombra img {
+  max-width: 80px;
+  height: auto;
+}
+
+.imgSombra img {
+  opacity: 0.3;
+  position: absolute;
+  transform: scale(1.2);
+  bottom: 2px;
+  right: 1px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.contenedorTarjeta:hover .imgSombra img{
+    transform: rotate(-20deg) scale(1.5);
+    opacity: 0.5;
+}

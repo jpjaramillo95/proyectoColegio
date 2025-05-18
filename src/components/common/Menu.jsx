@@ -17,7 +17,7 @@ export default function Menu() {
                 <NavLink to="/" className={({ isActive }) => isActive ? "linkActivo" : ""}>
                     <li>Inicio</li>
                 </NavLink>
-                <NavLink to="/aa" className={({ isActive }) => isActive ? "linkActivo" : ""}>
+                <NavLink to="/registroycontrol" className={({ isActive }) => isActive ? "linkActivo" : ""}>
                     <li>Registro y Control</li>
                 </NavLink>
                 <NavLink to="/a" className={({ isActive }) => isActive ? "linkActivo" : ""}>

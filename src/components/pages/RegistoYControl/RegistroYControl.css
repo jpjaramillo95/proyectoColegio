@@ -1,0 +1,32 @@
+.registroYControl {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 2%;
+}
+
+.tituloRegistroYControl {
+  padding-bottom: 10px;
+  border-bottom: 4px solid #0767a9;
+  display: block;
+  text-align: justify;
+  text-align: end;
+  margin: auto;
+  width: fit-content; 
+}
+
+.registroYControl p {
+    padding-top: 2%;
+  text-align: justify; 
+  width: 100%;
+  font-weight: 400;
+  font-size: 14pt;
+}
+
+.contenedorRegistro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
