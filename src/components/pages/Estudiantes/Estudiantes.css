@@ -1,0 +1,38 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Quicksand;
+  box-sizing: border-box;
+}
+
+.estudiantes {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 2%;
+}
+
+.tituloEstudiantes {
+  padding-bottom: 10px;
+  border-bottom: 4px solid #0767a9;
+  display: block;
+  text-align: justify;
+  text-align: end;
+  margin: auto;
+  width: fit-content; 
+}
+
+.estudiantes p {
+    padding-top: 2%;
+  text-align: justify; 
+  width: 100%;
+  font-weight: 400;
+  font-size: 14pt;
+}
+
+.contenedorEstudiantes{
+    margin: 20px;
+    padding: 15px;
+    background-color: #BDBDBD;
+    border-radius: 15px;
+}

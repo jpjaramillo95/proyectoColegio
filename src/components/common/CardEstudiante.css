@@ -1,0 +1,35 @@
+.grupoEstudiantes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.listaEstudiantes{
+    background-color: #BDBDBD;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.avatar{
+    width: 120px;
+    border-radius: 50%;
+    margin: 20px;
+    padding: 5px;
+    background-color: white;
+    flex-shrink: 0;
+}
+
+.infoEstudiante {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.button {
+    flex-shrink: 0;
+    margin-left: auto;
+}
