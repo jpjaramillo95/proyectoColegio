@@ -1,35 +1,51 @@
-.grupoEstudiantes{
+.grupoEstudiantes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 40px;
 }
 
 .listaEstudiantes{
-    background-color: #BDBDBD;
-    padding: 30px;
+    padding: 15px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    border: 5px solid #BDBDBD;
     border-radius: 15px;
+    width: 350px;
+    text-align: left;
 }
 
 .avatar{
-    width: 120px;
+    width: 140px;
     border-radius: 50%;
-    margin: 20px;
-    padding: 5px;
-    background-color: white;
+    margin-right: 20px;
+    padding: 8px;
+    background-color: #BDBDBD;
     flex-shrink: 0;
 }
 
 .infoEstudiante {
-    flex-grow: 1;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.button {
-    flex-shrink: 0;
-    margin-left: auto;
+.btnEstudiante {
+    background-color: #022942;
+    color: white;
+    margin-top: 5%;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: medium;
 }
+
+.btnEstudiante:hover {
+    background-color: #022136;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+

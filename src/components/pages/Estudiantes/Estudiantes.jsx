@@ -28,18 +28,41 @@ let grupos= [
                 edad: 15,
             },
         ]
+    },
+    {
+        grupo: 2,
+        estudiantes: [
+            {
+                imagen: avatar1,
+                nombre: "Andres Mauricio",
+                apellido: "Lopez Farias",
+                edad: 15,
+            },
+            {
+                imagen: avatar2,
+                nombre: "Andrea",
+                apellido: "Murcia Conejo",
+                edad: 14,
+            },
+            {
+                imagen: avatar2,
+                nombre: "Piroberta",
+                apellido: "Jajaj Jujuju",
+                edad: 15,
+            },
+        ]
     }
 ];
 
 function GrupoEstudiantes({ grupo }) {
   const [abierto, setAbierto] = useState(false);
   return (
-    <div className="grupoEstudiantes">
+    <div className="contenedorEstudiantes">
       <h2 onClick={() => setAbierto(!abierto)} className="tituloGrupo">
         Grupo #{grupo.grupo} {abierto ? "▲" : "▼"} 
       </h2>
       {abierto && (
-        <div className="listaEstudiantes">
+        <div className="grupoEstudiantes">
           {grupo.estudiantes.map((estudiante, index) => (
             <CardEstudiante 
               key={index}
