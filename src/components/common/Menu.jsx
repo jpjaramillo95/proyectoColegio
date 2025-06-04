@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom"
 import './Menu.css'
 import { useState } from "react"
+import cuenta from "../../../src/assets/img/cuenta.svg"
+// import notificacion from "../../../src/assets/img/notificacion.svg"
 
 export default function Menu() {
     const [menuAbierto, setMenuAbierto] = useState(false);
@@ -23,21 +25,21 @@ export default function Menu() {
                 <NavLink to="/estudiantes" className={({ isActive }) => isActive ? "linkActivo" : ""}>
                     <li>Estudiantes</li>
                 </NavLink>
-                <NavLink to="87" className={({ isActive }) => isActive ? "linkActivo" : ""}>
+                <NavLink to="/asistencia" className={({ isActive }) => isActive ? "linkActivo" : ""}>
                     <li>Asistencia</li>
                 </NavLink>
-                <NavLink to="87" className={({ isActive }) => isActive ? "linkActivo" : ""}>
+                <NavLink to="/notas" className={({ isActive }) => isActive ? "linkActivo" : ""}>
                     <li>Notas</li>
                 </NavLink>
             </ul>
-            {/* <ul className="iconsMenu">
-                <NavLink to="#">
-                    <li><img src="./img/img-index/log-menu.svg" alt="log menu" className="iconoMenu"/></li>
+            <ul className="iconsMenu">
+                {/* <NavLink to="/notificaciones">
+                    <li><img src={notificacion} alt="icono-notificacion " className="iconoMenu"/></li>
+                </NavLink> */}
+                <NavLink to="/login">
+                    <li><img src={cuenta} alt="icono-usuario" className="iconoMenu"/></li>
                 </NavLink>
-                <NavLink to="#">
-                    <li><img src="./img/img-index/cart-menu.svg" alt="cart menu" className="iconoMenu"/></li>
-                </NavLink>
-            </ul> */}
+            </ul>
         </section>
     </>
   )
