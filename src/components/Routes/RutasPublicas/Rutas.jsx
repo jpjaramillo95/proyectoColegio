@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Menu from "../../common/Menu";
 import Home from "../../pages/Home/Home";
 import Footer from "../../common/Footer";
@@ -8,16 +8,25 @@ import Login from "../../pages/Login/Login";
 import Notas from "../../pages/Notas/Notas";
 import RoleRoutes from "../RoleRoutes/RoleRoutes";
 import Asistencia from "../../pages/Asistencia/Asistencia";
+import { useState } from "react";
 
 export default function Rutas() {
+
+  let [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  let handleLogin = () => {
+    setIsAuthenticated(true);
+  }
+
   return (
     <>
       <Menu></Menu>
       <Routes>
         {/* Rutas públicas */}
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/home" element={<Home />}></Route>
+        <Route path="/" element={isAuthenticated ? <Navigate to="/home" /> : <Home/>}></Route>
+        <Route path="/login" element={isAuthenticated ? <Navigate to="/home" /> : <Login onLogin={handleLogin} />}></Route>
+        <Route path="/home" element={<Home/>}></Route>
+        <Route path="*" element={<Login />}></Route>
 
         {/* Rutas privadas */}
         <Route
