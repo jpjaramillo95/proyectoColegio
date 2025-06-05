@@ -1,10 +1,12 @@
-import { Navigate, Outlet } from "react-router-dom";
+import { Navigate, Outlet} from "react-router-dom"
+import './Rutas.css'
 
-export default function RoleRoutes({allowedRoles}) {
+export default function configPrivadas() {
+
     let user;
     let loading = false;
   
-    if (loading) {
+if (loading) {
   return (
     <div>
       <svg
@@ -91,19 +93,13 @@ export default function RoleRoutes({allowedRoles}) {
       </svg>
     </div>
   );
-    }
+}
 
-    // Si no hay usuaruio, redirigir a la página de login
-    if(!user){
-      return <Navigate to="/login" replace/>
-    }
+// Si no hay usuaruio, redirigir a la página de login
+if(!user){
+  return <Navigate to="/login" replace/>
+}
 
-    // Si el usuario no tiene el rol, redirigir a la página de inicio
-    if(!allowedRoles.includes(user.rol)){
-      return <Navigate to="/home" replace/>
-    }
-
-    // Usuario logueado, redirigir a la página de inicio
-    return <Outlet/>
-
+// Usuario logueado, redirigir a la página de inicio
+  return <Outlet/>
 }

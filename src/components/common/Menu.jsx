@@ -16,7 +16,7 @@ export default function Menu() {
             onClick={()=>setMenuAbierto(!menuAbierto)}> ☰ </button>
 
             <ul className={`menuOpciones ${menuAbierto ? "abierto" : ""}`}>
-                <NavLink to="/" className={({ isActive }) => isActive ? "linkActivo" : ""}>
+                <NavLink to="/home" className={({ isActive }) => isActive ? "linkActivo" : ""}>
                     <li>Inicio</li>
                 </NavLink>
                 <NavLink to="/registroycontrol" className={({ isActive }) => isActive ? "linkActivo" : ""}>

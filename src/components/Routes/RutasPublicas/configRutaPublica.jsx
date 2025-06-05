@@ -1,10 +1,12 @@
-import { Navigate, Outlet } from "react-router-dom";
+import './Rutas.css'
+import { Navigate, Outlet} from "react-router-dom"
 
-export default function RoleRoutes({allowedRoles}) {
+export default function configRutaPublica() {
+
     let user;
     let loading = false;
   
-    if (loading) {
+if (loading) {
   return (
     <div>
       <svg
@@ -91,19 +93,18 @@ export default function RoleRoutes({allowedRoles}) {
       </svg>
     </div>
   );
-    }
+}
 
-    // Si no hay usuaruio, redirigir a la página de login
-    if(!user){
-      return <Navigate to="/login" replace/>
-    }
+  if(user){
+    let redirectPath = user.rol == "admin"
+    ? "/home" :
+    user.rol == "profesor"
+    ? "/home" :
+    user.rol == "secretaria"
+    ? "/home" :
+    "/home";
+    return <Navigate to={redirectPath} replace/>
+  }
 
-    // Si el usuario no tiene el rol, redirigir a la página de inicio
-    if(!allowedRoles.includes(user.rol)){
-      return <Navigate to="/home" replace/>
-    }
-
-    // Usuario logueado, redirigir a la página de inicio
-    return <Outlet/>
-
+  return <Outlet/>
 }

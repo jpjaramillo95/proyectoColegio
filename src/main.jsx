@@ -6,7 +6,7 @@ import Rutas from './components/Routes/RutasPublicas/Rutas'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <Rutas></Rutas>
+      <Rutas />
     </BrowserRouter>
   </StrictMode>,
 )
