@@ -1,0 +1,32 @@
+{
+    "users":[
+        {
+            "id": 1,
+            "username": "Jairo",
+            "email": "jairo@gmail.com",
+            "password": "jairo123",
+            "rol": "admin"
+        },
+        {
+            "id": 2,
+            "username": "Yajaira",
+            "email": "yajaira@gmail.com",
+            "password": "yajaira123",
+            "rol": "profesor"
+        },
+        {
+            "id": 3,
+            "username": "Cuasimodo",
+            "email": "cuasimodo@gmail.com",
+            "password": "cuasimodo123",
+            "rol": "secretaria"
+        },
+        {
+            "id": 4,
+            "username": "Beto",
+            "email": "beto@gmail.com",
+            "password": "beto123",
+            "rol": "estudiante"
+        }
+    ]
+}
