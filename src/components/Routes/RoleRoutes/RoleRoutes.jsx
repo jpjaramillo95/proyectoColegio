@@ -1,7 +1,9 @@
 import { Navigate, Outlet } from "react-router-dom";
+import { UseAuth } from "../../../context/AuthContext";
+import '../RutasPublicas/Rutas.css'
 
 export default function RoleRoutes({allowedRoles}) {
-    let user;
+    let {user} = UseAuth();
     let loading = false;
   
     if (loading) {
