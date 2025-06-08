@@ -3,11 +3,11 @@ import { useForm } from 'react-hook-form'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import datos from '../../../assets/data.json'
-import { UseAuth } from '../../../context/AuthContext';
+import { useAuth } from '../../../context/AuthContext';
 import { getRoutes } from '../../common/getRoutes';
 
 export default function Login() { //{onLogin}
-  let {login} = UseAuth();
+  let {login} = useAuth();
   console.log(datos.users)
   let {register, handleSubmit, formState:{errors}} = useForm();
 
@@ -38,6 +38,7 @@ export default function Login() { //{onLogin}
   // guardar el usuario en localStorage y redireccionar al home
   if(userVerify){
     login(userVerify);
+    console.log("Redirigiendo a:", getRoutes(userVerify.rol)); 
     navigate(getRoutes(userVerify.rol));
     
   }else{

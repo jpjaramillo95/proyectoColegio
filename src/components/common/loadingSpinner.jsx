@@ -1,6 +1,7 @@
 import './loadingSpinner.css'
 
-export  function loadingSpinner() {
+export default function LoadingSpinner() {
+    return(
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -85,4 +86,5 @@ export  function loadingSpinner() {
         </g>
       </svg>
     </div>
+    )
 }

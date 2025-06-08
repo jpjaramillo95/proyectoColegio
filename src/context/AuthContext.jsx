@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 
-export const AuthProvider = createContext();
+export const authProvider = createContext();
 
 export default function AuthContext({children}) {
 
@@ -19,6 +19,7 @@ export default function AuthContext({children}) {
     function login(formUser){
       setUser(formUser);
       localStorage.setItem('userData', JSON.stringify(formUser));
+      setUser(JSON.parse(localStorage.getItem('userData')));
     }
 
     function logout(){
@@ -27,13 +28,13 @@ export default function AuthContext({children}) {
     }
 
   return (
-    <AuthProvider.Provider value={{user, login, logout, loading}}>
+    <authProvider.Provider value={{user, login, logout, loading}}>
       {children}
-    </AuthProvider.Provider>
+    </authProvider.Provider>
   )
 }
 
 // crear un hook para obtener el usuario
-export function UseAuth(){
-  return useContext(AuthProvider);
+export function useAuth(){
+  return useContext(authProvider);
 }
