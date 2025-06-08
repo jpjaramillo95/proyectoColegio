@@ -37,7 +37,10 @@ export default function Rutas() {
 
         {/* Rutas privadas */}
         <Route element={<ConfigPrivadas />}>
-          <Route
+          <Route element={<RoleRoutes allowedRoles={["admin", "secretaria"]} />}>
+            <Route path="/registroycontrol" element={<RegistroYControl />}></Route>
+          </Route>
+          {/* <Route
             path="/registroycontrol"
             element={
               <RoleRoutes allowedRoles={["admin", "secretaria"]}>
@@ -68,7 +71,7 @@ export default function Rutas() {
                 <Notas />
               </RoleRoutes>
             }
-          ></Route>
+          ></Route> */}
         </Route>
 
         {/*ruta 404*/}
