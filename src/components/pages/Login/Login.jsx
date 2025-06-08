@@ -38,7 +38,7 @@ export default function Login() { //{onLogin}
   // guardar el usuario en localStorage y redireccionar al home
   if(userVerify){
     login(userVerify);
-    console.log("Redirigiendo a:", getRoutes(userVerify.rol)); 
+    // console.log("Redirigiendo a:", getRoutes(userVerify.rol)); 
     navigate(getRoutes(userVerify.rol));
     
   }else{

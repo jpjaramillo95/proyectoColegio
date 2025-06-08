@@ -5,7 +5,7 @@ export const authProvider = createContext();
 export default function AuthContext({children}) {
 
     const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         // verificar si el usuario está logueado
