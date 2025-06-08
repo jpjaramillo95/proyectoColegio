@@ -19,12 +19,12 @@ export default function AuthContext({children}) {
     function login(formUser){
       setUser(formUser);
       localStorage.setItem('userData', JSON.stringify(formUser));
-      setUser(JSON.parse(localStorage.getItem('userData')));
     }
 
     function logout(){
       setUser(null);
       localStorage.removeItem('userData');
+      window.location.reload();
     }
 
   return (

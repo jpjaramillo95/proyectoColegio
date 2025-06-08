@@ -1,11 +1,22 @@
 import { NavLink } from "react-router-dom"
 import './Menu.css'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import cuenta from "../../../src/assets/img/cuenta.svg"
+import { useAuth } from "../../context/AuthContext";
 // import notificacion from "../../../src/assets/img/notificacion.svg"
 
 export default function Menu() {
     const [menuAbierto, setMenuAbierto] = useState(false);
+    const [menuPerfilAbierto, setMenuPerfilAbierto] = useState(false);
+
+    let{user, logout} = useAuth();
+
+    console.log("info user: ", user)
+
+    useEffect(()=>{
+        console.log("user: ", user)
+    })
+
   return (
     <>
         <section id="menu">
@@ -32,13 +43,25 @@ export default function Menu() {
                     <li>Notas</li>
                 </NavLink>
             </ul>
-            <ul className="iconsMenu">
-                {/* <NavLink to="/notificaciones">
-                    <li><img src={notificacion} alt="icono-notificacion " className="iconoMenu"/></li>
-                </NavLink> */}
+            {/* <ul className="iconsMenu">
                 <NavLink to="/login">
-                    <li><img src={cuenta} alt="icono-usuario" className="iconoMenu"/></li>
+                    <li className="usuarioContainer">
+                        <p className="nombreUser">{user ? user.username: "Hola "}</p>
+                        <img src={cuenta} alt="icono-usuario" className="iconoMenu"/>
+                    </li>
                 </NavLink>
+            </ul> */}
+            <ul className="iconsMenu">
+                <div className="usuarioContainer" onClick={() => setMenuPerfilAbierto(!menuPerfilAbierto)}>
+                    <p className="nombreUser">{user ? user.username : "Hola"}</p>
+                    <img src={cuenta} alt="icono-usuario" className="iconoMenu"/>
+                </div>
+
+                {menuPerfilAbierto && (
+                    <div className="menuPerfil">
+                        <button className="logoutButton" onClick={()=>logout()} >Cerrar sesión</button>
+                    </div>
+                )}
             </ul>
         </section>
     </>
