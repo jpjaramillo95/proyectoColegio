@@ -32,7 +32,6 @@ export default function Rutas() {
           <Route path="/" element={isAuthenticated ? <Navigate to="/home" /> : <Home/>}></Route>
           <Route path="/login" element={isAuthenticated ? <Navigate to="/home" /> : <Login onLogin={handleLogin} />}></Route>
           <Route path="/home" element={<Home/>}></Route>
-          <Route path="*" element={<Login />}></Route>
         </Route>
 
         {/* Rutas privadas */}
@@ -40,38 +39,13 @@ export default function Rutas() {
           <Route element={<RoleRoutes allowedRoles={["admin", "secretaria"]} />}>
             <Route path="/registroycontrol" element={<RegistroYControl />}></Route>
           </Route>
-          {/* <Route
-            path="/registroycontrol"
-            element={
-              <RoleRoutes allowedRoles={["admin", "secretaria"]}>
-                <RegistroYControl />
-              </RoleRoutes>
-            }
-          ></Route>
-          <Route
-            path="/estudiantes"
-            element={
-              <RoleRoutes allowedRoles={["admin", "profesor", "secretaria"]}>
-                <Estudiantes />
-              </RoleRoutes>
-            }
-          ></Route>
-          <Route
-            path="/asistencia"
-            element={
-              <RoleRoutes allowedRoles={["admin", "profesor"]}>
-                <Asistencia />
-              </RoleRoutes>
-            }
-          ></Route>
-          <Route
-            path="/notas"
-            element={
-              <RoleRoutes allowedRoles={["admin", "profesor"]}>
-                <Notas />
-              </RoleRoutes>
-            }
-          ></Route> */}
+          <Route element={<RoleRoutes allowedRoles={["admin", "secretaria", "profesor"]} />}>
+            <Route path="/estudiantes" element={<Estudiantes />}></Route>
+          </Route>
+          <Route element={<RoleRoutes allowedRoles={["admin", "profesor"]} />}>
+            <Route path="/asistencia" element={<Asistencia />}></Route>
+            <Route path="/notas" element={<Notas />}></Route>
+          </Route>
         </Route>
 
         {/*ruta 404*/}

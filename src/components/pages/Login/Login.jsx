@@ -37,12 +37,7 @@ export default function Login() { //{onLogin}
   // guardar el usuario en localStorage y redireccionar al home
   if(userVerify){
     login(userVerify);
-    switch(userVerify.rol){
-      case "admin": navigate("/home"); break;
-      case "profesor": navigate("/home"); break;
-      case "secretaria": navigate("/home"); break;
-      default: navigate("/home"); break;
-    }
+    
   }else{
     alert("Usuario o contraseña incorrectos");
   }
