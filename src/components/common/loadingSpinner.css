@@ -1,3 +1,19 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Hace que ocupe toda la altura de la pantalla */
+  width: 100%;
+}
+
+.loading-text {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #0767a9;
+  font-weight: bold;
+}
+
 /* From Uiverse.io by gustavofusco */ 
 .pencil {
   display: block;
