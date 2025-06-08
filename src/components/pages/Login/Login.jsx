@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import datos from '../../../assets/data.json'
 import { UseAuth } from '../../../context/AuthContext';
+import { getRoutes } from '../../common/getRoutes';
 
 export default function Login() { //{onLogin}
   let {login} = UseAuth();
@@ -37,6 +38,7 @@ export default function Login() { //{onLogin}
   // guardar el usuario en localStorage y redireccionar al home
   if(userVerify){
     login(userVerify);
+    navigate(getRoutes(userVerify.rol));
     
   }else{
     alert("Usuario o contraseña incorrectos");
