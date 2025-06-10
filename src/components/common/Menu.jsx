@@ -42,6 +42,9 @@ export default function Menu() {
                 <NavLink to="/notas" className={({ isActive }) => isActive ? "linkActivo" : ""}>
                     <li>Notas</li>
                 </NavLink>
+                <NavLink to="/analisisdatos" className={({ isActive }) => isActive ? "linkActivo" : ""}>
+                    <li>Analisis de Datos</li>
+                </NavLink>
             </ul>
             {/* <ul className="iconsMenu">
                 <NavLink to="/login">

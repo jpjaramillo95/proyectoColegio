@@ -1,0 +1,21 @@
+.analisisDeDatos {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 2%;
+}
+
+.tituloAnalisis {
+    padding-bottom: 10px;
+    border-bottom: 4px solid #0767a9;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.contenedorTarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}

@@ -13,6 +13,7 @@ import AuthContext from "../../../context/AuthContext";
 import ConfigRutaPublica from "./configRutaPublica";
 import ConfigPrivadas from "../RutasPrivadas/configPrivadas";
 import NotFound from "../../pages/NotFound/NotFound";
+import AnalisisDeDatos from "../../pages/AnalisisDeDatos/AnalisisDeDatos";
 
 export default function Rutas() {
 
@@ -41,6 +42,7 @@ export default function Rutas() {
           </Route>
           <Route element={<RoleRoutes allowedRoles={["admin", "secretaria", "profesor"]} />}>
             <Route path="/estudiantes" element={<Estudiantes />}></Route>
+            <Route path="/analisisdatos" element={<AnalisisDeDatos />}></Route>
           </Route>
           <Route element={<RoleRoutes allowedRoles={["admin", "profesor"]} />}>
             <Route path="/asistencia" element={<Asistencia />}></Route>
