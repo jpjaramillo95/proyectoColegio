@@ -1,9 +1,9 @@
 import './CardRegistroYControl.css'
 
-export default function CardRegistroYControl({imagen, tipo}) {
+export default function CardRegistroYControl({imagen, tipo, onClick}) {
   return (
     <>
-      <div className="contenedorTarjeta">
+      <div className="contenedorTarjeta" onClick={onClick}>
             <div className="elementosIzquierda">
                 <div className="imagenCard">
                     <img src={imagen} alt="iconoCard" />

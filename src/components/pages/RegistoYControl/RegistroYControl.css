@@ -5,12 +5,188 @@
   box-sizing: border-box;
 }
 
+.contenedorFormulario {
+    background: #0767a9;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h2 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #ffffff;
+    background: #f0f0f0;
+}
+
+button {
+    padding: 10px;
+    font-size: 1rem;
+    background: #ffffff;
+    color: #0767a9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #f44336;
+    color: white;
+}
+
+.mensaje {
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    background: #28a745;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.cardRegistro {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cardRegistro:hover {
+    transform: scale(1.05);
+}
+
+.contenedorFormularioVolver {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.contenedorFormulario button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedorFormulario button:hover {
+    background-color: #d32f2f;
+}
+
+.cardRegistroYControl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 250px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cardRegistroYControl:hover {
+    transform: scale(1.05);
+}
+
+.imagenRegistro {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.tipoRegistro {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
 .registroYControl {
   width: 80%;
   margin: auto;
   text-align: center;
   padding-top: 2%;
 }
+
+.registroYControl p {
+    padding-top: 2%;
+  text-align: justify; 
+  width: 100%;
+  font-weight: 400;
+  font-size: 14pt;
+}
+
+.contenedorFormularioVolver {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.formularioWrapper {
+  margin: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.botonVolver {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #0767a9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.botonVolver:hover {
+    background: #055a8c;
+}
+
 
 .tituloRegistroYControl {
   padding-bottom: 10px;
@@ -20,14 +196,6 @@
   text-align: end;
   margin: auto;
   width: fit-content; 
-}
-
-.registroYControl p {
-    padding-top: 2%;
-  text-align: justify; 
-  width: 100%;
-  font-weight: 400;
-  font-size: 14pt;
 }
 
 .contenedorRegistro {

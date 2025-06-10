@@ -1,13 +1,13 @@
 .contenedorTarjeta {
-  margin: 70px 20px;
+  width: 340px;
+  height: 230px; 
+  margin: 20px;
   padding: 2%;
   background-color: #0767a9;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 300px;
-  width: 100%;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -20,17 +20,18 @@
 
 .elementosIzquierda {
   position: relative;
-  left: 1px;
+  width: 80%;
+  text-align: center;
 }
 
 .tituloCard {
   color: white;
-  padding-top: 5px;
+  padding-top: 18px;
+  font-size: 18px;
 }
 
-.imagenCard img,
-.imgSombra img {
-  max-width: 80px;
+.imagenCard img {
+  max-width: 100px;
   height: auto;
 }
 
@@ -38,8 +39,9 @@
   opacity: 0.3;
   position: absolute;
   transform: scale(1.2);
-  bottom: 2px;
-  right: 1px;
+  bottom: 5px;
+  right: 5px;
+  width: 120px;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
@@ -48,10 +50,12 @@
   opacity: 0.5;
 }
 
+
 @media screen and (max-width: 480px) {
   .contenedorTarjeta {
-    max-width: 90%;
-    margin: 40px auto;
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
   }
 
   .tituloCard {
@@ -59,20 +63,18 @@
   }
 
   .imagenCard img {
-    max-width: 60px;
+    max-width: 80px;
   }
 
-  .btnNoticia {
-    width: 100%;
-    font-size: 14px;
-    padding: 8px;
+  .imgSombra img {
+    width: 100px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .contenedorTarjeta {
-    width: 80%;
-    margin: auto;
+    width: 220px;
+    height: 250px;
   }
 
   .tituloCard {
@@ -80,7 +82,7 @@
   }
 
   .imagenCard img {
-    max-width: 70px;
+    max-width: 90px;
   }
 }
 
@@ -93,7 +95,7 @@
   }
 
   .contenedorTarjeta {
-    width: 350px;
-    height: auto;
+    width: 280px;
+    height: 300px;
   }
 }
